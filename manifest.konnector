@@ -1,0 +1,95 @@
+{
+  "version": "1.0.0",
+  "name": "Bankin",
+  "type": "konnector",
+  "language": "node",
+  "icon": "icon.png",
+  "slug": "bankin",
+  "source": "git://github.com/na-ji/cozy-konnector-bankin.git",
+  "editor": "Cozy",
+  "vendor_link": "https://bankin.com/",
+  "categories": ["banking"],
+  "fields": {
+    "bankinDevice": {
+      "type": "text"
+    },
+    "client_id": {
+      "type": "text"
+    },
+    "client_secret": {
+      "type": "text"
+    },
+    "email": {
+      "type": "text"
+    },
+    "password": {
+      "type": "password"
+    },
+    "advancedFields": {
+      "folderPath": {
+        "advanced": true,
+        "isRequired": false
+      }
+    }
+  },
+  "data_types": [
+    "bankAccounts",
+    "bankTransactions"
+  ],
+  "screenshots": [],
+  "permissions": {
+    "bank.accounts": {
+      "description": "Required to save the list of bank accounts",
+      "type": "io.cozy.bank.accounts"
+    },
+    "bank.operations": {
+      "description": "Required to save your bank operations",
+      "type": "io.cozy.bank.operations"
+    },
+    "accounts": {
+      "description": "Required to get the account's data",
+      "type": "io.cozy.accounts",
+      "verbs": ["GET"]
+    },
+    "bank.balancehistories": {
+      "description": "Required to save balance histories",
+      "type": "io.cozy.bank.balancehistories"
+    },
+    "files": {
+      "description": "Required to save the account statements",
+      "type": "io.cozy.files"
+    }
+  },
+  "developer": {
+    "name": "Naji Astier",
+    "url": "https://github.com/na-ji"
+  },
+  "langs": ["fr", "en"],
+  "locales": {
+    "fr": {
+      "short_description": "Récupère vos opérations bancaires",
+      "long_description": "Récupère vos opérations bancaires",
+      "permissions": {
+        "bank.accounts": {
+          "description": "Utilisé pour sauvegarder la liste de vos comptes bancaires"
+        },
+        "bank.balancehistories": {
+          "description": "Utilisé pour sauvegarder les historiques de solde"
+        }
+      }
+    },
+    "en": {
+      "short_description": "Retrieves your bank operations",
+      "long_description": "Retrieves your bank operations",
+      "permissions": {
+        "bank.accounts": {
+          "description": "Used to save the list of bank accounts"
+        },
+        "bank.balancehistories": {
+          "description": "Required to save balance histories"
+        }
+      }
+    }
+  },
+  "manifest_version": "1"
+}
