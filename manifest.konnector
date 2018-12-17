@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Bankin",
+  "name": "Bankin'",
   "type": "konnector",
   "language": "node",
   "icon": "icon.png",
@@ -9,33 +9,43 @@
   "editor": "Cozy",
   "vendor_link": "https://bankin.com/",
   "categories": ["banking"],
+  "frequency": "daily",
   "fields": {
     "bankinDevice": {
-      "type": "text"
-    },
-    "client_id": {
-      "type": "text"
-    },
-    "client_secret": {
-      "type": "text"
+      "type": "text",
+      "label": "fields.bankinDevice.label",
+      "description": "fields.bankinDevice.description"
     },
     "email": {
-      "type": "text"
+      "type": "text",
+      "label": "fields.email.label"
     },
     "password": {
-      "type": "password"
+      "type": "password",
+      "label": "fields.password.label"
     },
     "advancedFields": {
       "folderPath": {
         "advanced": true,
         "isRequired": false
+      },
+      "client_id": {
+        "type": "text",
+        "advanced": true,
+        "isRequired": false,
+        "label": "fields.client_id.label",
+        "description": "fields.client_id.description"
+      },
+      "client_secret": {
+        "type": "text",
+        "advanced": true,
+        "isRequired": false,
+        "label": "fields.client_secret.label",
+        "description": "fields.client_secret.description"
       }
     }
   },
-  "data_types": [
-    "bankAccounts",
-    "bankTransactions"
-  ],
+  "data_types": ["bankAccounts", "bankTransactions"],
   "screenshots": [],
   "permissions": {
     "bank.accounts": {
@@ -76,6 +86,26 @@
         "bank.balancehistories": {
           "description": "Utilisé pour sauvegarder les historiques de solde"
         }
+      },
+      "fields": {
+        "bankinDevice": {
+          "label": "Device Bankin",
+          "description": "temporaire"
+        },
+        "email": {
+          "label": "Adresse email"
+        },
+        "password": {
+          "label": "Mot de passe"
+        },
+        "client_id": {
+          "label": "Client ID (optionnel)",
+          "description": "Client ID pour se connecter à l'API Bankin'. Possiblité d'avoir son propre Client sur https://bridgeapi.io/"
+        },
+        "client_secret": {
+          "label": "Client Secret (optionnel)",
+          "description": "Client Secret pour se connecter à l'API Bankin'. Possiblité d'avoir son propre Client sur https://bridgeapi.io/"
+        }
       }
     },
     "en": {
@@ -87,6 +117,26 @@
         },
         "bank.balancehistories": {
           "description": "Required to save balance histories"
+        }
+      },
+      "fields": {
+        "bankinDevice": {
+          "label": "Device Bankin",
+          "description": "temporary"
+        },
+        "email": {
+          "label": "Email address"
+        },
+        "password": {
+          "label": "Password"
+        },
+        "client_id": {
+          "label": "Client ID (optional)",
+          "description": "Client ID to use Bankin' API. Possibility to create your client on https://bridgeapi.io/"
+        },
+        "client_secret": {
+          "label": "Client Secret (optional)",
+          "description": "Client Secret to use Bankin' API. Possibility to create your client on https://bridgeapi.io/"
         }
       }
     }
