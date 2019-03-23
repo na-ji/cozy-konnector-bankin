@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "Bankin'",
   "type": "konnector",
   "language": "node",
@@ -11,11 +11,6 @@
   "categories": ["banking"],
   "frequency": "daily",
   "fields": {
-    "bankinDevice": {
-      "type": "text",
-      "label": "fields.bankinDevice.label",
-      "description": "fields.bankinDevice.description"
-    },
     "email": {
       "type": "text",
       "label": "fields.email.label"
@@ -29,19 +24,19 @@
         "advanced": true,
         "isRequired": false
       },
-      "client_id": {
+      "clientId": {
         "type": "text",
         "advanced": true,
         "isRequired": false,
-        "label": "fields.client_id.label",
-        "description": "fields.client_id.description"
+        "label": "fields.clientId.label",
+        "description": "fields.clientId.description"
       },
-      "client_secret": {
+      "clientSecret": {
         "type": "text",
         "advanced": true,
         "isRequired": false,
-        "label": "fields.client_secret.label",
-        "description": "fields.client_secret.description"
+        "label": "fields.clientSecret.label",
+        "description": "fields.clientSecret.description"
       }
     }
   },
@@ -88,21 +83,17 @@
         }
       },
       "fields": {
-        "bankinDevice": {
-          "label": "Device Bankin",
-          "description": "temporaire"
-        },
         "email": {
           "label": "Adresse email"
         },
         "password": {
           "label": "Mot de passe"
         },
-        "client_id": {
+        "clientId": {
           "label": "Client ID (optionnel)",
           "description": "Client ID pour se connecter à l'API Bankin'. Possiblité d'avoir son propre Client sur https://bridgeapi.io/"
         },
-        "client_secret": {
+        "clientSecret": {
           "label": "Client Secret (optionnel)",
           "description": "Client Secret pour se connecter à l'API Bankin'. Possiblité d'avoir son propre Client sur https://bridgeapi.io/"
         }
@@ -120,21 +111,17 @@
         }
       },
       "fields": {
-        "bankinDevice": {
-          "label": "Device Bankin",
-          "description": "temporary"
-        },
         "email": {
           "label": "Email address"
         },
         "password": {
           "label": "Password"
         },
-        "client_id": {
+        "clientId": {
           "label": "Client ID (optional)",
           "description": "Client ID to use Bankin' API. Possibility to create your client on https://bridgeapi.io/"
         },
-        "client_secret": {
+        "clientSecret": {
           "label": "Client Secret (optional)",
           "description": "Client Secret to use Bankin' API. Possibility to create your client on https://bridgeapi.io/"
         }
