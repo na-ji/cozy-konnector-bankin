@@ -1,4 +1,4 @@
-[Cozy][cozy] <YOUR SUPER NEW KONNECTOR NAME>
+[Cozy][cozy] Konnector Bankin'
 =======================================
 
 What's Cozy?
@@ -11,8 +11,7 @@ What's Cozy?
 What is this konnector about ?
 ------------------------------
 
-This konnector retrieves your <SOME DATA> and <SOME OTHER DATA> from <SERVICE>
-<YOUR DESCRIPTION HERE>
+This konnector retrieves your financial data from Bankin' to use in the Cozy Bank app.
 
 ### Open a Pull-Request
 
@@ -25,10 +24,15 @@ If you want to work on this konnector and submit code modifications, feel free t
 
 Create a `konnector-dev-config.json` file at the root with your test credentials :
 
-```javascript
+```json
 {
   "COZY_URL": "http://cozy.tools:8080",
-  "fields": {"login":"zuck.m@rk.fb", "password":"123456"}
+  "fields": {
+    "email": "zuck.m@rk.fb",
+    "password": "123456",
+    "clientId": "BANKIN_CLIENT_ID",
+    "clientSecret": "BANKIN_CLIENT_SECRET"
+  }
 }
 ```
 Then :
@@ -45,7 +49,7 @@ This connector uses [cozy-konnector-libs](https://github.com/cozy/cozy-konnector
 
 ### Maintainer
 
-The lead maintainers for this konnector is <YOUR NAME>
+The lead maintainers for this konnector is [Naji](https://github.com/na-ji)
 
 
 ### Get in touch
@@ -62,7 +66,7 @@ You can reach the Cozy Community by:
 License
 -------
 
-<YOUR KONNECTOR NAME> is developed by <your name> and distributed under the [AGPL v3 license][agpl-3.0].
+cozy-konnector-bankin is developed by Naji and distributed under the [AGPL v3 license][agpl-3.0].
 
 [cozy]: https://cozy.io "Cozy Cloud"
 [agpl-3.0]: https://www.gnu.org/licenses/agpl-3.0.html
