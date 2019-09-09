@@ -3,11 +3,11 @@ node_js:
 - '8'
 env:
   global:
-  - GH_USER_EMAIL="travis@example.org"
-  - GH_USER_NAME="cozy-bot"
-  - DEPLOY_REPOSITORY="git@github.com:konnectors/cozy-konnector-template.git"
-  # Token to access Cozy Registry, you should replace it with a token specific to this konnector
-  - secure: CQ44ZVjPAIVRvGgMcduSAX4VmaOrzF3nrJXPFUsNQ2tMVVdaAlI1zTNkdfntqigZgz6Mpk9x+2FcA8qrkNzQ4cW0lPP9f5dBtSH1xetfpXDFKprW4bqzmhgXSXJFTOYxkChOBPmCYJr+Vv4XqDkv/dBEPdfRSgvVyd5YxHSd5HBU91rKyR+Hox7LTnhmlXleLIs11EQgp7RK+L28MBCtCqAa2niFlKKRlqupm2FSpZzxCh9qeY0wKCQzPE+QZUm4waJ1SUGKQwbzAfyOxu2O6rwzaTSknfdJoSX6AMxjRTWBC9c3VfUGM3wjVJIqMhiUj2FQhVIjiDyX/W60/q3UMC5WYzSvEDDfhnKCPwiUKSU7HvSxx9q2YP34evxKo7KPahz9zLlQZvW+GBMyI9hbMDBTALuQVVzhftsvqfrogyYhkEPviiYiVADWNxhacsbUjRA5svXnZvtmCPo7fLFwel/krgC5Z8AwAY0YxWjSHNVScUkieSDCrlxrC09vTtG60unt9gtXbD5ruUkDLWSUwHBv2p0WY1TdP+2Vlf3yYfBvEVbqi59AxG+T17bq7Xv3QZnkrwC+UOCNCeg+gHPv+fRpUaYWzCO4uaoY/nlJa7RulQFhGca3A//6xRo/KgWw9JJnOXJelNjE9oHCUu9xShotUZKOF+O93V/BRqs9ITo=
+  - DEPLOY_REPOSITORY="git@github.com:konnectors/bankin.git"
+  # REGISTRY_TOKEN
+  - secure: nwxMM14I8vkp7r+/NT27r/qJivBDtszokDCD+kvJgSZo9e/AZm13hWvh+RRtK7CU3BnPj9NTw1OoBSGfwhB+0ynMJusaX26pn/ySloZrojyG05FbLeGW/yGRJnTxHYaTlgXEo2kyhS7NWHju/h0Sc2wgAhvvJ5+xW8feUrPh5wvjNHD2V7sGxH7ZlQZ15RnLynnjlss320XOdVhn5SUd6/ZN0/ibvATF7DPbRLWV3FRqD7B9QiOarW/AXlj+NXI4DOWGws0j4HtQ4+ciijQmjjrUb/IsuVGIC5xJcjWLgX1lDNsT5TK8rE5HoB9uS+KIa/UAY96Xl6w5YCL/M6z+QXF4mt/TuLQyUccpbX0+yrAAVn3Dxs9X9pLZWiSid9eF+ODx37uWQ+4Zc9/EVei7rVRzpmvjLAPiCzIhWRQC8DucTKhS2ATA0JPUB9bvZaU8foHp1lY+5I6lU6AgqmtgCcHmCwerhaKvDTajKCY3WIkkiqnQg4kqe6eO6Kr3YZsl/9XhVMNhO4iDS9XzejNhnWR3f574mGq9gSwfM10RTKc265YzEDZGDzGJ6J6NtGVTkM5NoSWLuigwURYXb8AQQhYTmPp/zLsL8mAzZoKHIg4CwVK1DZ/F4pz/NLF8r3Ef37qkM9ZLo/KORfqz2TQZnBqQc5SQXs5HvvfaTkFZKYU=
+  # MATTERMOST_HOOK_URL
+  - secure: Dpr1AZCzPDMzLH2ewZgEcZ2pM4QmWMZfZnOWdq1soh+HAMjt7Q5+LBPmJqEhwstZHQHkYCEi/5r48AZ7ER+iz4QKvMB+UTF84NgPNigLmnXWMDtXTJisZMGqXR6A3YF/VhjdRSF68grtxpmSIVDD6PA8DO8aYoDazn1HZh13dvB4/G8/0oa8s8e5QliC3R5KiV3PtkaoPyFSWtB4pKkQBwnDDnRIJzEWJHb7LPKYInmRdT9ehJLip2A4IRu7ppUWJpOy28OmaIo0zoKeqiOrRI8eu1ugAncKOQZEG1/OSO/Qs3Gv5wkxPTM9qLoL3pd4yF+t/ragFD+7W6I5sHgueg7adPQSKbvjg4zGcGzO/2nOYrtPbp/RWp6a3Jnl3EECMOToLEb6OocM9vxU15YJ3naqDymd5lohe8J4wP8TumIXSu3s9vJjvgsDARdPtpHvSo4TwBrL4hZcLpgn3VnKYc9P49hx9FXyTjtKgYcWwkiNOm7ApdmNwSU9GjxaEZjc662oismMrcdBUujz91tulq5hPCjd9+lkLOG3bf9vknylAldB9UXPuA2uE3XJ72DZj8Pg3oFJlp07c8wYYV6c2JyFUCRtniRx0YFEqfUEJZTYcgXwhAsSxjZnR5Q4VG3ji4wQlW7LIr137i5zOrIBBEuMxFugGpTY+7a5E454juc=
 cache:
   yarn: true
   directories:
@@ -19,22 +19,20 @@ branches:
 script:
 - yarn lint
 - yarn build
-- yarn run check
 deploy:
 - provider: script
   skip-cleanup: true
-  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish
+  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish --space selfhosted
   on:
     branch: master
 - provider: script
   skip-cleanup: true
-  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish
+  script: DEPLOY_BRANCH=build yarn deploy && yarn cozyPublish --space selfhosted --postpublish mattermost
   on:
     tags: true
 before_install:
-# run the yarn travisDeployKey command to genrate this
-# - openssl aes-256-cbc -K $encrypted_0b21ecdcf920_key -iv $encrypted_0b21ecdcf920_iv
-#   -in github_deploy_key.enc -out /tmp/github_deploy_key -d
+- openssl aes-256-cbc -K $encrypted_e4b7de943182_key -iv $encrypted_e4b7de943182_iv
+  -in github_deploy_key.enc -out /tmp/github_deploy_key -d
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/github_deploy_key
 - ssh-add /tmp/github_deploy_key

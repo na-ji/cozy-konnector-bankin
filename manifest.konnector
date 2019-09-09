@@ -59,10 +59,6 @@
     "bank.balancehistories": {
       "description": "Required to save balance histories",
       "type": "io.cozy.bank.balancehistories"
-    },
-    "files": {
-      "description": "Required to save the account statements",
-      "type": "io.cozy.files"
     }
   },
   "developer": {
