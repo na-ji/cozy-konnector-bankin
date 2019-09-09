@@ -5,7 +5,7 @@
   "language": "node",
   "icon": "icon.png",
   "slug": "bankin",
-  "source": "git://github.com/na-ji/cozy-konnector-bankin.git",
+  "source": "git@github.com:konnectors/bankin.git",
   "editor": "Cozy",
   "vendor_link": "https://bankin.com/",
   "categories": ["banking"],
@@ -59,10 +59,6 @@
     "bank.balancehistories": {
       "description": "Required to save balance histories",
       "type": "io.cozy.bank.balancehistories"
-    },
-    "files": {
-      "description": "Required to save the account statements",
-      "type": "io.cozy.files"
     }
   },
   "developer": {

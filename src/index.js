@@ -43,7 +43,7 @@ async function start(fields) {
     const balances = await fetchBalances(savedAccounts)
     await saveBalances(balances)
   } catch (error) {
-    log('error', JSON.stringify(error))
+    log('error', error)
   }
 
   log('info', 'Saving account data...')
