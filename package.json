@@ -40,7 +40,7 @@
   "dependencies": {
     "cozy-doctypes": "1.63.2",
     "cozy-konnector-libs": "4.26.0",
-    "moment": "2.24.0"
+    "moment": "2.29.4"
   },
   "devDependencies": {
     "copy-webpack-plugin": "5.0.4",
